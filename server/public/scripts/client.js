@@ -11,13 +11,10 @@ myApp.controller('WelcomeController', function(){
   welcome.buttonLike = function(index){
    welcome.photos[index].likes += 1;
  };
-
-  welcome.toggleShow = function(index){
-    welcome.photos[index].visible = !welcome.photos[index].visible;
-  };
-
-
-
+ welcome.toggleShow = function(index){
+   welcome.photos[index].visible = !welcome.photos[index].visible;
+   console.log(welcome.photos[index].visible);
+ };
   function createphotos(){
     welcome.photos[0] = {
       pic: "/images/image - 1.jpg",
