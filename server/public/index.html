@@ -16,10 +16,11 @@
     <div ng-controller="WelcomeController as welcome">
 
     <h1>{{welcome.message}}</h1>
-    <div ng-repeat="photos in welcome.names">
-
-  <img ng-src="{{ photos }}" />`
-
+    <div ng-repeat="person in welcome.photos">
+      <div ng-click="welcome.toggleShow($index)">
+         <img ng-show="person.visible" ng-src="{{person.pic}}">
+         <p>{{person.desc}}</p>
+      </div>
 </div>
   </div>
   </div>
