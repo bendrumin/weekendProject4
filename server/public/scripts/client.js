@@ -8,7 +8,7 @@ myApp.controller('WelcomeController', function(){
   welcome.photos = [];
   createphotos();
 
-  welcome.incrementLike = function(index){
+  welcome.buttonLike = function(index){
    welcome.photos[index].likes += 1;
  };
 
