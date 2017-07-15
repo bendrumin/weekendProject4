@@ -1,0 +1,9 @@
+.col-md-4:nth-child(3n+1){
+    clear: left;
+}
+.likeRow {
+    padding-bottom: 10px;
+}
+p.likeCount {
+    padding-top: 5px;
+}
