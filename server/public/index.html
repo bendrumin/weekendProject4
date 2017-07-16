@@ -17,29 +17,28 @@
 </head>
 <body ng-app="myApp">
   <div class="container">
-    <div ng-controller="WelcomeController as welcome">
+    <div ng-controller="WelcomeController as gallery">
 
       <h1>{{welcome.message}}</h1>
       <div class="row">
-          <div class="col-md-4" align="center" ng-repeat="person in welcome.photos">
-            <div  class="imageContainer">
-             <img class="img-responsive" ng-click="welcome.toggleShow($index)" ng-show="person.visible" ng-src="{{person.pic}}">
-              <p class="photoDesc" ng-click="welcome.toggleShow($index)" ng-hide="person.visible">{{person.desc}}</p>
+        <div class="col-md-4" align="center" ng-repeat="picture in gallery.pictures track by $index">
+          <div  class="imageContainer">
+            <img class="img-responsive" ng-show="picture.visible" ng-src="{{picture.url}}" ng-click="gallery.toggle(picture)" alt="">
+            <div class="description" ng-hide="picture.visible" ng-click="gallery.toggle(picture)" >
+              <p>{{picture.description}}</p>
+            </div>
           </div>
           <div class="likeRow">
-
-
-          <button ng-click="count = count + 1" ng-init="count=0" class=" likeBtn btn btn-primary btn-md">
-            <span>Like</span>
-
-          </button>
-          <p class="likeCount">
-            This has been liked {{count}} times.
-          </p>
+            <button ng-click="count = count + 1" ng-init="count=0" class=" likeBtn btn btn-primary btn-md">
+              <span>Like</span>
+            </button>
+              <p class="likeCount">
+                This has been liked {{count}} times.
+              </p>
           </div>
-        </div>
       </div>
     </div>
+  </div>
   </div>
 </body>
 </html>
