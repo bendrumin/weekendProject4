@@ -2,7 +2,11 @@ console.log('JS Sourced');
 var myApp = angular.module('myApp', []);  //Will leave empty for now
 
 myApp.controller('WelcomeController', function(){
+
+
   var gallery = this;
+  gallery.message = 'Hello, welcome to my life';
+
 
 
  // Old toggle, works but messy
