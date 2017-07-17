@@ -57,6 +57,24 @@ myApp.controller('WelcomeController', function(){
       likes: 0,
       visible: true,
     },
+    {
+      url: "/images/image - 7.gif",
+      description: "I was surprised by a quick trip to Duluth a few weekends back, this is from the falls.",
+      likes: 0,
+      visible: true,
+    },
+    {
+      url: "/images/image - 8.gif",
+      description: "This is coco, enough said.",
+      likes: 0,
+      visible: true,
+    },
+    {
+      url: "/images/image - 9.jpg",
+      description: "I took 2 week solo trip to London, Paris and Amsterdam.  It was pretty awesome.",
+      likes: 0,
+      visible: true,
+    },
   ];
   gallery.likes = function(pictures) {
     pictures.likes += 1;
